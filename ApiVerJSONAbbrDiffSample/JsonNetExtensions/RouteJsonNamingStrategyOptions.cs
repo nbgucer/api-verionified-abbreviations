@@ -29,7 +29,7 @@ namespace ApiVerJSONAbbrDiffSample.JsonNetExtensions
         public string GetValidNamingStrategyFromRoute()
         {
             var httpContext = _options.HttpContextAccessorProvider().HttpContext;
-            var namingStrategyRoute = httpContext.Request.Path.ToString().Split(@"/").ElementAtOrDefault(2).ToLower();
+            var namingStrategyRoute = httpContext.Request.Path.ToString().Split(@"/").ElementAtOrDefault(2)?.ToLower();
 
             if (string.IsNullOrEmpty(namingStrategyRoute) || !_options.NamingStrategies.ContainsKey(namingStrategyRoute))
             {
