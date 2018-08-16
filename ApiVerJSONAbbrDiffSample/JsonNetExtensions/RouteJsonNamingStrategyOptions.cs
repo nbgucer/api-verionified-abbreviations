@@ -17,8 +17,6 @@ namespace ApiVerJSONAbbrDiffSample.JsonNetExtensions
 
     public class RouteJsonNamingStrategy : NamingStrategy
     {
-        private readonly SnakeCaseNamingStrategy _snakeCaseNamingStrategy = new SnakeCaseNamingStrategy();
-        private readonly CamelCaseNamingStrategy _camelCaseNamingStrategy = new CamelCaseNamingStrategy();
         private readonly RouteJsonNamingStrategyOptions _options;
 
         public RouteJsonNamingStrategy(RouteJsonNamingStrategyOptions options)
